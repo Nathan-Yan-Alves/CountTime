@@ -1,0 +1,57 @@
+$font-stack: "Roboto", sans-serif;
+$primary-color: #21eb00;
+$secondary-color: #80cf58;
+$base-color: #191a18;
+
+@mixin title() {
+    font-size: 5rem;
+    text-align: center;
+    color: $primary-color;
+}
+
+@mixin center($flex-dir: row, $justify: center) {
+    display: flex;
+    flex-direction: $flex-dir;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin input-style() {
+    width: 100%;
+    padding: 10px;
+
+    outline: 0;
+    border: none;
+    border-radius: 1.5rem;
+
+    font-size: 1.6rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-stack;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url("../assets/images/background-cont.gif") center/cover
+        no-repeat;
+
+    @include center;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    color: $secondary-color;
+}

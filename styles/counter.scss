@@ -1,0 +1,58 @@
+@import "base";
+
+.content {
+    padding: 20px;
+    overflow: hidden;
+    .content-header {
+        width: 100%;
+        @include center($justify: space-between);
+        .title {
+            @include title();
+        }
+        .restart {
+            @include input-style();
+            width: 10rem;
+            background: $primary-color;
+            transition: all 0.6s;
+        }
+
+        .restart:focus,
+        .restart:hover {
+            border: 1px solid $primary-color;
+            background: transparent;
+            color: $primary-color;
+        }
+    }
+
+    .content-body {
+        height: 100%;
+        @include center($flex-dir: column);
+        h1 {
+            font-size: 10rem;
+            color: $base-color;
+            margin-bottom: 1.8rem;
+            opacity: 0.5;
+        }
+
+        .counter {
+            @include center($justify: space-around);
+            width: 80%;
+            margin-top: 2.4rem;
+        }
+
+        div[class="counter"] > div {
+            @include center($flex-dir: column);
+
+            h2 {
+                font-size: 13rem;
+                color: $primary-color;
+                transition: all 0.6;
+            }
+
+            span {
+                font-size: 3.2rem;
+                color: #fff;
+            }
+        }
+    }
+}

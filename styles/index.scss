@@ -1,0 +1,43 @@
+@import "base";
+
+.content {
+    @include center($flex-dir: column);
+}
+
+.title {
+    @include title();
+}
+
+.subtitle {
+    margin: 0.7rem 0;
+    font-size: 1.8rem;
+}
+
+.inp-container {
+    @include center($flex-dir: column);
+    width: 250px;
+
+    #date-input {
+        @include input-style;
+
+        background: $base-color;
+        color: #fff;
+        opacity: 0.8;
+    }
+
+    #date-submit {
+        @include input-style;
+
+        margin-top: 0.8rem;
+
+        background: $primary-color;
+
+        font-weight: bold;
+    }
+
+    #date-submit:focus {
+        border: 1px solid $primary-color;
+        background: transparent;
+        color: $primary-color;
+    }
+}
